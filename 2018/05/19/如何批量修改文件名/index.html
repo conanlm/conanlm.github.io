@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://conanlm.github.io').hostname,
+    root: '/',
+    scheme: 'Muse',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: 'ZK4ZPV1UYR',
+      apiKey: '3b75a10f99719f4e4a6de22120763599',
+      indexName: 'github Index name',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="原文地址 https:&#x2F;&#x2F;jingyan.baidu.com&#x2F;article&#x2F;656db918a7e848e381249c0e.html  具备一定电脑操作和电子表格 xls 基础 电脑（xp 操作系统）、安装有 xls">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何批量修改文件名">
+<meta property="og:url" content="https://conanlm.github.io/2018/05/19/%E5%A6%82%E4%BD%95%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8D/index.html">
+<meta property="og:site_name" content="conanlm">
+<meta property="og:description" content="原文地址 https:&#x2F;&#x2F;jingyan.baidu.com&#x2F;article&#x2F;656db918a7e848e381249c0e.html  具备一定电脑操作和电子表格 xls 基础 电脑（xp 操作系统）、安装有 xls">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=510518e490ef76c6d0d2fb2bad14fdf6/838ba61ea8d3fd1ff5ec68ff304e251f94ca5f0a.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=65a50deabe096b6381195e503c318733/96dda144ad345982dd542f570cf431adcaef841d.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=f31e5e298db1cb133e693c13ed5656da/bba1cd11728b47107ea4c80ac3cec3fdfd032368.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=553d182ebc3eb13544c7b7bb961fa8cb/d31b0ef41bd5ad6e08f3502c81cb39dbb7fd3ce9.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=1e9f4351d933c895a67e987be1117397/4bed2e738bd4b31c96baa07d87d6277f9f2ff875.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=3f3cc87665380cd7e61ea2ed9145ad14/9c16fdfaaf51f3de3bcd8ea294eef01f3b2979fc.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=379ef5f5918fa0ec7fc7640d1696594a/359b033b5bb5c9ea40803425d539b6003bf3b380.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=00e5d8424aed2e73fce9862cb703a16d/54fbb2fb43166d2279d52252462309f79152d251.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=7e9585b2ebf81a4c2632ecc9e7286029/0df431adcbef76093990ae592edda3cc7dd99e58.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=4ecd38df2df5e0feee1889016c6234e5/6609c93d70cf3bc721effa2ad100baa1cc112a0c.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=5debaa813912b31bc76ccd29b6193674/908fa0ec08fa513d08f15a183d6d55fbb3fbd998.jpg">
+<meta property="article:published_time" content="2018-05-19T02:40:09.000Z">
+<meta property="article:modified_time" content="2018-05-19T02:44:03.577Z">
+<meta property="article:author" content="conanlm">
+<meta property="article:tag" content="电脑知识">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://imgsa.baidu.com/exp/w=500/sign=510518e490ef76c6d0d2fb2bad14fdf6/838ba61ea8d3fd1ff5ec68ff304e251f94ca5f0a.jpg">
+
+<link rel="canonical" href="https://conanlm.github.io/2018/05/19/%E5%A6%82%E4%BD%95%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8D/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>如何批量修改文件名 | conanlm</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">conanlm</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://conanlm.github.io/2018/05/19/%E5%A6%82%E4%BD%95%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conanlm">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="conanlm">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          如何批量修改文件名
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2018-05-19 10:40:09 / 修改时间：10:44:03" itemprop="dateCreated datePublished" datetime="2018-05-19T10:40:09+08:00">2018-05-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%94%B5%E8%84%91%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index">
+                    <span itemprop="name">电脑知识</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <blockquote>
+<p>原文地址 <a href="https://jingyan.baidu.com/article/656db918a7e848e381249c0e.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/656db918a7e848e381249c0e.html</a></p>
+</blockquote>
+<p>具备一定电脑操作和电子表格 xls 基础</p>
+<p>电脑（xp 操作系统）、安装有 xls</p>
+<a id="more"></a>
+<p>在 c 盘建立一个文件夹，将下载的图片放置于该文件夹中，如下图所示。</p>
+<p><a log="type:20150831,pos:enter_step" target="_self"><img src="https://imgsa.baidu.com/exp/w=500/sign=510518e490ef76c6d0d2fb2bad14fdf6/838ba61ea8d3fd1ff5ec68ff304e251f94ca5f0a.jpg" alt=""></a></p>
+<p>鼠标左键点击，开始 -》运行 -》在对话框中输入字母 “cmd”，进入 dos 模式 ，如下图所示。</p>
+<p><a log="type:20150831,pos:enter_step" target="_self"><img src="https://imgsa.baidu.com/exp/w=500/sign=65a50deabe096b6381195e503c318733/96dda144ad345982dd542f570cf431adcaef841d.jpg" alt=""></a></p>
+<p>在 dos 模式输入命令行 “cd c:\pic” 然后回车，再输入命令行“dir /b&gt;rename.xls”，如下图所示，可将文件夹中的文件名在 rename.xls 文件中列出。</p>
+<p><strong>小贴士：有的时候，你的计算机正处于中文输入状态，为确保命令行能够打出来，你可以切换成英文大写状态。</strong></p>
+<p><a log="type:20150831,pos:enter_step" target="_self"><img src="https://imgsa.baidu.com/exp/w=500/sign=f31e5e298db1cb133e693c13ed5656da/bba1cd11728b47107ea4c80ac3cec3fdfd032368.jpg" alt=""></a></p>
+<p>随后用 xls 打开 c:\pic 文件夹中的 rename.xls，你会发现文件名以全部罗列在 A 列中（你也可以用鼠标来调整文件名的顺序），你可以在 B1 列中输入 1.jpg 作为第一个文件文件名。</p>
+<p><a log="type:20150831,pos:enter_step" target="_self"><img src="https://imgsa.baidu.com/exp/w=500/sign=553d182ebc3eb13544c7b7bb961fa8cb/d31b0ef41bd5ad6e08f3502c81cb39dbb7fd3ce9.jpg" alt=""></a></p>
+<p>鼠标选中 B1 单元格，并在 B1 列的右下方，使鼠标光标变为 + 号时，拖动使所有 jpg 文件的右侧 B 列中都有文件名。再将 A8 单元格中没有用的文件名删除，如下图示。</p>
+<p><a log="type:20150831,pos:enter_step" target="_self"><img src="https://imgsa.baidu.com/exp/w=500/sign=1e9f4351d933c895a67e987be1117397/4bed2e738bd4b31c96baa07d87d6277f9f2ff875.jpg" alt=""></a></p>
+<p>鼠标选中 C1 单元格，并在编辑框中输入公式 =”ren”&amp;A1&amp;” “&amp;B1，如下图所示。</p>
+<p><a log="type:20150831,pos:enter_step" target="_self"><img src="https://imgsa.baidu.com/exp/w=500/sign=3f3cc87665380cd7e61ea2ed9145ad14/9c16fdfaaf51f3de3bcd8ea294eef01f3b2979fc.jpg" alt=""></a></p>
+<p>继续用鼠标拖动 C1 单元格右下方的句柄，使剩余的 C2-C7 单元格填充如下图所示。</p>
+<p><a log="type:20150831,pos:enter_step" target="_self"><img src="https://imgsa.baidu.com/exp/w=500/sign=379ef5f5918fa0ec7fc7640d1696594a/359b033b5bb5c9ea40803425d539b6003bf3b380.jpg" alt=""></a></p>
+<p>然后，鼠标选中 C 列，鼠标右键复制，如下图示。</p>
+<p><a log="type:20150831,pos:enter_step" target="_self"><img src="https://imgsa.baidu.com/exp/w=500/sign=00e5d8424aed2e73fce9862cb703a16d/54fbb2fb43166d2279d52252462309f79152d251.jpg" alt=""></a></p>
+<p>在记事本中，粘贴刚才的命令行，如下图示。</p>
+<p><a log="type:20150831,pos:enter_step" target="_self"><img src="https://imgsa.baidu.com/exp/w=500/sign=7e9585b2ebf81a4c2632ecc9e7286029/0df431adcbef76093990ae592edda3cc7dd99e58.jpg" alt=""></a></p>
+<p>鼠标点击菜单 “文件”——“另存为”，输入文件名 ren.bat，要注意下图所示红圈中的路径及扩展名选项。</p>
+<p><a log="type:20150831,pos:enter_step" target="_self"><img src="https://imgsa.baidu.com/exp/w=500/sign=4ecd38df2df5e0feee1889016c6234e5/6609c93d70cf3bc721effa2ad100baa1cc112a0c.jpg" alt=""></a></p>
+<p>打开 c 盘 pic 文件夹，鼠标双击 ren.bat 这个批处理文件，即可将该文件夹下的 jpg 图片，按照刚才 rename.xls 中的顺序和文件名批量修改文件名，如下图示。</p>
+<p><a log="type:20150831,pos:enter_step" target="_self"><img src="https://imgsa.baidu.com/exp/w=500/sign=5debaa813912b31bc76ccd29b6193674/908fa0ec08fa513d08f15a183d6d55fbb3fbd998.jpg" alt=""></a></p>
+<p>自此，你已经完成了批量修改文件名的操作。我们运用了 dos 命令技巧、xls 技巧以及批处理 3 个知识点来达到批量修改文件名的效果。</p>
+<p>该经验需要有一定 dos 基础和电脑操作基础的人才能举一反三，如果掌握一定 xls 函数公式基础的话，可以把批量处理文件名玩得更溜。</p>
+<p><strong>如果本经验对你有帮助，请你鼠标点击一下 “收藏” 或“成功”给予我一点肯定哦，当然也可以给点击给我月票。</strong></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%94%B5%E8%84%91%E7%9F%A5%E8%AF%86/" rel="tag"># 电脑知识</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/05/19/%E5%88%A9%E7%94%A8WScript-Shell%E5%AF%B9%E8%B1%A1%E9%9A%90%E8%97%8Fcmd%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BF%90%E8%A1%8C%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/" rel="prev" title="利用WScript.Shell对象隐藏cmd命令行运行框的实现代码">
+      <i class="fa fa-chevron-left"></i> 利用WScript.Shell对象隐藏cmd命令行运行框的实现代码
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2018/05/19/hexo%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="next" title="hexo使用教程">
+      hexo使用教程 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">conanlm</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">conanlm</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

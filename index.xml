@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>conanlm</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on conanlm</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 17 Sep 2019 20:15:38 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hexo 版本升级和 Next 主题</title>
+      <link>http://localhost:1313/post/hexo-%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7%E5%92%8C-next-%E4%B8%BB%E9%A2%98/</link>
+      <pubDate>Tue, 17 Sep 2019 20:15:38 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/hexo-%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7%E5%92%8C-next-%E4%B8%BB%E9%A2%98/</guid>
+      <description>&lt;h3 id=&#34;hexo-&#34;&gt;Hexo 版本升级&lt;/h3&gt;
+&lt;p&gt;Hexo 版本升级可以通过 npm 实现，相关命令如下：&lt;br&gt;
+先全局升级&lt;code&gt;hexo-cli&lt;/code&gt;：-g 表示全局升级。&lt;code&gt;hexo&lt;/code&gt;本身是一个静态博客生成工具，具备编译 Markdown、拼接主题模板、生成 HTML、上传 Git 等基本功能。&lt;code&gt;hexo-cli&lt;/code&gt;能够将这些功能封装为命令，提供给用户通过&lt;code&gt;hexo server / hexo deploy&lt;/code&gt;等命令调用的模块。&lt;code&gt;CLI = Command Line Interface&lt;/code&gt;命令行界面。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;npm i hexo-cli -g
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;然后直接输入：(其实这个命令应该不正确)，输入之后发现出现了一系列的 warn。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;npm update
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>修改AD域账户策略</title>
+      <link>http://localhost:1313/post/%E4%BF%AE%E6%94%B9ad%E5%9F%9F%E8%B4%A6%E6%88%B7%E7%AD%96%E7%95%A5/</link>
+      <pubDate>Thu, 26 Jul 2018 20:48:36 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E4%BF%AE%E6%94%B9ad%E5%9F%9F%E8%B4%A6%E6%88%B7%E7%AD%96%E7%95%A5/</guid>
+      <description>控制面板-管理工具-组策略管理 林-域-域名-default Domain Policy-右键编辑 策略-Windows设置-安全设置-密码策略 注：加入域的服</description>
+    </item>
+    
+    <item>
+      <title>H3C交换机常用命令</title>
+      <link>http://localhost:1313/post/h3c%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sat, 30 Jun 2018 20:53:42 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/h3c%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;h2 id=&#34;display-interface&#34;&gt;display interface&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;   dis int b
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;显示端口的概要信息。不指定该参数时，将显示端口的详细信息。&lt;/p&gt;
+&lt;h2 id=&#34;display-mac-address&#34;&gt;display mac-address&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&amp;lt;Sysname&amp;gt; display mac-address 000f-e201-0101
+
+        MAC ADDR        VLAN ID   STATE            PORT INDEX              AGING TIME(s)
+
+        000f-e201-0101  1         Learned          Ethernet1/0/1           AGING
+
+ 
+
+          ---  1 mac address(es) found  ---
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;显示MAC地址表中MAC地址为000f-e201-0101的表项的信息&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    dis mac-address vlan xxx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;vlan vlan-id：显示指定VLAN的MAC地址表项。vlan-id的取值范围为1～4094。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2003 dhcp迁移 2012r2</title>
+      <link>http://localhost:1313/post/2003-dhcp%E8%BF%81%E7%A7%BB-2012r2/</link>
+      <pubDate>Mon, 28 May 2018 21:13:26 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/2003-dhcp%E8%BF%81%E7%A7%BB-2012r2/</guid>
+      <description>&lt;h2 id=&#34;2003dhcp&#34;&gt;在2003服务器上导出dhcp配置文件&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;netsh dhcp server dump &amp;gt; c:\win2003dump.txt&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>DNS添加转发器</title>
+      <link>http://localhost:1313/post/dns%E6%B7%BB%E5%8A%A0%E8%BD%AC%E5%8F%91%E5%99%A8/</link>
+      <pubDate>Mon, 28 May 2018 21:13:09 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/dns%E6%B7%BB%E5%8A%A0%E8%BD%AC%E5%8F%91%E5%99%A8/</guid>
+      <description>&lt;h3 id=&#34;dns&#34;&gt;添加DNS服务器&lt;/h3&gt;
+&lt;p&gt;下一步就可以了&lt;/p&gt;
+&lt;h3 id=&#34;dns-1&#34;&gt;DNS右键属性&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>CredSSP 加密 Oracle 修正</title>
+      <link>http://localhost:1313/post/credssp-%E5%8A%A0%E5%AF%86-oracle-%E4%BF%AE%E6%AD%A3/</link>
+      <pubDate>Tue, 22 May 2018 21:02:34 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/credssp-%E5%8A%A0%E5%AF%86-oracle-%E4%BF%AE%E6%AD%A3/</guid>
+      <description>&lt;h1 id=&#34;-credssp--oracle-httpswwwyunzznetnews41html--credssp--oracle-&#34;&gt;&lt;a href=&#34;https://www.yunzz.net/news/41.html&#34; title=&#34;【解决方法】这可能是由于 CredSSP 加密 Oracle 修正&#34;&gt;【解决方法】这可能是由于 CredSSP 加密 Oracle 修正&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.yunzz.net/news/zb_users/upload/2018/05/201805111526032736124230.png&#34; title=&#34;USSJSFKHEKHZEADE.png&#34;&gt;&lt;img src=&#34;https://www.yunzz.net/news/zb_users/upload/2018/05/201805111526032736124230.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;其实事情是这样的：&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>华为 RH2288 做 raid 方法</title>
+      <link>http://localhost:1313/post/%E5%8D%8E%E4%B8%BA-rh2288-%E5%81%9A-raid-%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Tue, 22 May 2018 21:02:15 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E5%8D%8E%E4%B8%BA-rh2288-%E5%81%9A-raid-%E6%96%B9%E6%B3%95/</guid>
+      <description>&lt;h1 id=&#34;-rh2288--raid-&#34;&gt;华为 RH2288 做 raid 方法&lt;/h1&gt;
+&lt;p&gt;1 开机根据屏幕提示按 ctrl+R 进入 raid 设置界面
+&lt;img src=&#34;https://i.loli.net/2018/05/22/5b041cfeaba0d.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>hexo使用教程</title>
+      <link>http://localhost:1313/post/hexo%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sat, 19 May 2018 11:13:55 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/hexo%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
+      <description>&lt;h3 id=&#34;heading&#34;&gt;安装&lt;/h3&gt;
+&lt;p&gt;文档：https://hexo.io/zh-cn/docs/
+先安装&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://nodejs.org/&#34;&gt;Node.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com&#34;&gt;Git&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>windows和office激活</title>
+      <link>http://localhost:1313/post/windows%E5%92%8Coffice%E6%BF%80%E6%B4%BB/</link>
+      <pubDate>Sat, 19 May 2018 10:16:37 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/windows%E5%92%8Coffice%E6%BF%80%E6%B4%BB/</guid>
+      <description>&lt;h2 id=&#34;windows&#34;&gt;激活windows&lt;/h2&gt;
+&lt;p&gt;使用管理员权限运行cmd执行&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;slmgr /skms kms.03k.org
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;手动激活&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;slmgr /ato
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>iPhone导出照片到电脑</title>
+      <link>http://localhost:1313/post/iphone%E5%AF%BC%E5%87%BA%E7%85%A7%E7%89%87%E5%88%B0%E7%94%B5%E8%84%91/</link>
+      <pubDate>Sat, 19 May 2018 09:36:36 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/iphone%E5%AF%BC%E5%87%BA%E7%85%A7%E7%89%87%E5%88%B0%E7%94%B5%E8%84%91/</guid>
+      <description>电脑手机同时登陆qq，电脑qq出现我的设备，选择iPhone，选择导出 手机相册，手机上接受授权申请，电脑端选择要导出的照片，设置保存 位置，点</description>
+    </item>
+    
+    <item>
+      <title>如何批量修改文件名</title>
+      <link>http://localhost:1313/post/%E5%A6%82%E4%BD%95%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8D/</link>
+      <pubDate>Sat, 19 May 2018 10:40:09 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E5%A6%82%E4%BD%95%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8D/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原文地址 &lt;a href=&#34;https://jingyan.baidu.com/article/656db918a7e848e381249c0e.html&#34;&gt;https://jingyan.baidu.com/article/656db918a7e848e381249c0e.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;具备一定电脑操作和电子表格 xls 基础&lt;/p&gt;
+&lt;p&gt;电脑（xp 操作系统）、安装有 xls&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>利用WScript.Shell对象隐藏cmd命令行运行框的实现代码</title>
+      <link>http://localhost:1313/post/%E5%88%A9%E7%94%A8wscript-shell%E5%AF%B9%E8%B1%A1%E9%9A%90%E8%97%8Fcmd%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BF%90%E8%A1%8C%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Sat, 19 May 2018 10:39:39 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E5%88%A9%E7%94%A8wscript-shell%E5%AF%B9%E8%B1%A1%E9%9A%90%E8%97%8Fcmd%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BF%90%E8%A1%8C%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;WScript.Shell（Windows Script Host Runtime Library）是一个对象，对应的文件是C:\WINDOWS\system32\wshom.ocx，Wscript.shell是服务器系统会用到的一种组件。shell 就是“壳”的意思，这个对象可以执行操作系统外壳常用的操作，比如运行程序、读写注册表、环境变量等。这个对象通常被用在VB或VBS编程中。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装WScript.Shell对象：regsvr32 WShom.Ocx
+卸载WScript.Shell对象：regsvr32 -u WShom.Ocx或者regsvr32 /u WShom.Ocx&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;例子，假设mytest*.iso文件均在C:根目录下。建立mytest目录，将mytest*.iso文件拷贝到mytest目录下。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用批处理文件同时打多个CMD窗口且执行多条命令</title>
+      <link>http://localhost:1313/post/%E4%BD%BF%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E5%90%8C%E6%97%B6%E6%89%93%E5%A4%9A%E4%B8%AAcmd%E7%AA%97%E5%8F%A3%E4%B8%94%E6%89%A7%E8%A1%8C%E5%A4%9A%E6%9D%A1%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sat, 19 May 2018 10:39:20 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E4%BD%BF%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E5%90%8C%E6%97%B6%E6%89%93%E5%A4%9A%E4%B8%AAcmd%E7%AA%97%E5%8F%A3%E4%B8%94%E6%89%A7%E8%A1%8C%E5%A4%9A%E6%9D%A1%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;使用批处理文件时，可以用下面方法打打多个CMD窗口，并且每个窗口中执行多条命令。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;start 用来启动一个应用
+cmd /k 表示cmd后面的命令执行完后不关闭窗口。如果要在执行完成后关闭窗口可以用/c 。详细请使用cmd/?查看
+&amp;ldquo;命令1&amp;amp;&amp;amp;命令2&amp;amp;&amp;amp;..&amp;rdquo; 将要执行的多条命令使用引号全部包起来，并且在命令间用&amp;amp;&amp;amp;分隔。如果只有一条命令则不用引号也可以。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>测试新题目</title>
+      <link>http://localhost:1313/post/%E6%B5%8B%E8%AF%95%E6%96%B0%E9%A2%98%E7%9B%AE/</link>
+      <pubDate>Fri, 18 May 2018 19:25:27 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E6%B5%8B%E8%AF%95%E6%96%B0%E9%A2%98%E7%9B%AE/</guid>
+      <description>&lt;p&gt;{% blockquote %}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.
+{% endblockquote %}&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;测试内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;{% codeblock %}
+alert(&amp;lsquo;Hello World!&#39;);
+{% endcodeblock %}&lt;/p&gt;
+&lt;p&gt;{% codeblock _.compact &lt;a href=&#34;http://underscorejs.org/#compact&#34;&gt;http://underscorejs.org/#compact&lt;/a&gt; Underscore.js %}
+_.compact([0, 1, false, 2, &amp;lsquo;&#39;, 3]);
+=&amp;gt; [1, 2, 3]
+{% endcodeblock %}&lt;/p&gt;
+&lt;p&gt;{% pullquote [class] %}
+content
+{% endpullquote %}&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;啊实打实的
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;heading&#34;&gt;啊实打实的作者&lt;/h3&gt;
+&lt;h4 id=&#34;heading-1&#34;&gt;啊实打实打算&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/43205eae-cb0f-4b39-87b2-99efa471c88f.jpg&#34; alt=&#34;avatar&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

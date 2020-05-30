@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hexo on conanlm</title>
+    <link>http://localhost:1313/categories/hexo/</link>
+    <description>Recent content in hexo on conanlm</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 17 Sep 2019 20:15:38 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/hexo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hexo 版本升级和 Next 主题</title>
+      <link>http://localhost:1313/post/hexo-%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7%E5%92%8C-next-%E4%B8%BB%E9%A2%98/</link>
+      <pubDate>Tue, 17 Sep 2019 20:15:38 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/hexo-%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7%E5%92%8C-next-%E4%B8%BB%E9%A2%98/</guid>
+      <description>&lt;h3 id=&#34;hexo-&#34;&gt;Hexo 版本升级&lt;/h3&gt;
+&lt;p&gt;Hexo 版本升级可以通过 npm 实现，相关命令如下：&lt;br&gt;
+先全局升级&lt;code&gt;hexo-cli&lt;/code&gt;：-g 表示全局升级。&lt;code&gt;hexo&lt;/code&gt;本身是一个静态博客生成工具，具备编译 Markdown、拼接主题模板、生成 HTML、上传 Git 等基本功能。&lt;code&gt;hexo-cli&lt;/code&gt;能够将这些功能封装为命令，提供给用户通过&lt;code&gt;hexo server / hexo deploy&lt;/code&gt;等命令调用的模块。&lt;code&gt;CLI = Command Line Interface&lt;/code&gt;命令行界面。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;npm i hexo-cli -g
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;然后直接输入：(其实这个命令应该不正确)，输入之后发现出现了一系列的 warn。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;npm update
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>hexo使用教程</title>
+      <link>http://localhost:1313/post/hexo%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sat, 19 May 2018 11:13:55 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/hexo%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
+      <description>&lt;h3 id=&#34;heading&#34;&gt;安装&lt;/h3&gt;
+&lt;p&gt;文档：https://hexo.io/zh-cn/docs/
+先安装&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://nodejs.org/&#34;&gt;Node.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com&#34;&gt;Git&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>电脑知识 on conanlm</title>
+    <link>http://localhost:1313/tags/%E7%94%B5%E8%84%91%E7%9F%A5%E8%AF%86/</link>
+    <description>Recent content in 电脑知识 on conanlm</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 19 May 2018 10:40:09 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/%E7%94%B5%E8%84%91%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何批量修改文件名</title>
+      <link>http://localhost:1313/post/%E5%A6%82%E4%BD%95%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8D/</link>
+      <pubDate>Sat, 19 May 2018 10:40:09 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E5%A6%82%E4%BD%95%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8D/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原文地址 &lt;a href=&#34;https://jingyan.baidu.com/article/656db918a7e848e381249c0e.html&#34;&gt;https://jingyan.baidu.com/article/656db918a7e848e381249c0e.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;具备一定电脑操作和电子表格 xls 基础&lt;/p&gt;
+&lt;p&gt;电脑（xp 操作系统）、安装有 xls&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

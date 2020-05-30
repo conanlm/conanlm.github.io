@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>如何批量修改文件名 - conanlm</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="conanlm" /><meta name="description" content=" 原文地址 https://jingyan.baidu.com/article/656db918a7e848e381249c0e.html
+ 具备一定电脑操作和电子表格 xls 基础
+电脑（xp 操作系统）、安装有 xls
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.62.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/%E5%A6%82%E4%BD%95%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8D/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="如何批量修改文件名" />
+<meta property="og:description" content="
+原文地址 https://jingyan.baidu.com/article/656db918a7e848e381249c0e.html
+
+具备一定电脑操作和电子表格 xls 基础
+电脑（xp 操作系统）、安装有 xls" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/%E5%A6%82%E4%BD%95%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8D/" />
+<meta property="article:published_time" content="2018-05-19T10:40:09+08:00" />
+<meta property="article:modified_time" content="2018-05-19T10:40:09+08:00" />
+<meta itemprop="name" content="如何批量修改文件名">
+<meta itemprop="description" content="
+原文地址 https://jingyan.baidu.com/article/656db918a7e848e381249c0e.html
+
+具备一定电脑操作和电子表格 xls 基础
+电脑（xp 操作系统）、安装有 xls">
+<meta itemprop="datePublished" content="2018-05-19T10:40:09&#43;08:00" />
+<meta itemprop="dateModified" content="2018-05-19T10:40:09&#43;08:00" />
+<meta itemprop="wordCount" content="788">
+
+
+
+<meta itemprop="keywords" content="电脑知识," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="如何批量修改文件名"/>
+<meta name="twitter:description" content="
+原文地址 https://jingyan.baidu.com/article/656db918a7e848e381249c0e.html
+
+具备一定电脑操作和电子表格 xls 基础
+电脑（xp 操作系统）、安装有 xls"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">conanlm</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">conanlm</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li style="display:inline-block;margin-right:10px;">
+    <input type="search" class="docsearch-input" placeholder="Search" />
+  </li></ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">如何批量修改文件名</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-05-19 </span>
+        <div class="post-category">
+            <a href="/categories/%E7%94%B5%E8%84%91%E7%9F%A5%E8%AF%86/"> 电脑知识 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <blockquote>
+<p>原文地址 <a href="https://jingyan.baidu.com/article/656db918a7e848e381249c0e.html">https://jingyan.baidu.com/article/656db918a7e848e381249c0e.html</a></p>
+</blockquote>
+<p>具备一定电脑操作和电子表格 xls 基础</p>
+<p>电脑（xp 操作系统）、安装有 xls</p>
+<p>在 c 盘建立一个文件夹，将下载的图片放置于该文件夹中，如下图所示。</p>
+<p><!-- raw HTML omitted --><img src="https://imgsa.baidu.com/exp/w=500/sign=510518e490ef76c6d0d2fb2bad14fdf6/838ba61ea8d3fd1ff5ec68ff304e251f94ca5f0a.jpg" alt=""><!-- raw HTML omitted --></p>
+<p>鼠标左键点击，开始 -》运行 -》在对话框中输入字母 “cmd”，进入 dos 模式 ，如下图所示。</p>
+<p><!-- raw HTML omitted --><img src="https://imgsa.baidu.com/exp/w=500/sign=65a50deabe096b6381195e503c318733/96dda144ad345982dd542f570cf431adcaef841d.jpg" alt=""><!-- raw HTML omitted --></p>
+<p>在 dos 模式输入命令行 “cd c:\pic” 然后回车，再输入命令行“dir /b&gt;rename.xls&rdquo;，如下图所示，可将文件夹中的文件名在 rename.xls 文件中列出。</p>
+<p><strong>小贴士：有的时候，你的计算机正处于中文输入状态，为确保命令行能够打出来，你可以切换成英文大写状态。</strong></p>
+<p><!-- raw HTML omitted --><img src="https://imgsa.baidu.com/exp/w=500/sign=f31e5e298db1cb133e693c13ed5656da/bba1cd11728b47107ea4c80ac3cec3fdfd032368.jpg" alt=""><!-- raw HTML omitted --></p>
+<p>随后用 xls 打开 c:\pic 文件夹中的 rename.xls，你会发现文件名以全部罗列在 A 列中（你也可以用鼠标来调整文件名的顺序），你可以在 B1 列中输入 1.jpg 作为第一个文件文件名。</p>
+<p><!-- raw HTML omitted --><img src="https://imgsa.baidu.com/exp/w=500/sign=553d182ebc3eb13544c7b7bb961fa8cb/d31b0ef41bd5ad6e08f3502c81cb39dbb7fd3ce9.jpg" alt=""><!-- raw HTML omitted --></p>
+<p>鼠标选中 B1 单元格，并在 B1 列的右下方，使鼠标光标变为 + 号时，拖动使所有 jpg 文件的右侧 B 列中都有文件名。再将 A8 单元格中没有用的文件名删除，如下图示。</p>
+<p><!-- raw HTML omitted --><img src="https://imgsa.baidu.com/exp/w=500/sign=1e9f4351d933c895a67e987be1117397/4bed2e738bd4b31c96baa07d87d6277f9f2ff875.jpg" alt=""><!-- raw HTML omitted --></p>
+<p>鼠标选中 C1 单元格，并在编辑框中输入公式 =&quot;ren&rdquo;&amp;A1&amp;&rdquo; &ldquo;&amp;B1，如下图所示。</p>
+<p><!-- raw HTML omitted --><img src="https://imgsa.baidu.com/exp/w=500/sign=3f3cc87665380cd7e61ea2ed9145ad14/9c16fdfaaf51f3de3bcd8ea294eef01f3b2979fc.jpg" alt=""><!-- raw HTML omitted --></p>
+<p>继续用鼠标拖动 C1 单元格右下方的句柄，使剩余的 C2-C7 单元格填充如下图所示。</p>
+<p><!-- raw HTML omitted --><img src="https://imgsa.baidu.com/exp/w=500/sign=379ef5f5918fa0ec7fc7640d1696594a/359b033b5bb5c9ea40803425d539b6003bf3b380.jpg" alt=""><!-- raw HTML omitted --></p>
+<p>然后，鼠标选中 C 列，鼠标右键复制，如下图示。</p>
+<p><!-- raw HTML omitted --><img src="https://imgsa.baidu.com/exp/w=500/sign=00e5d8424aed2e73fce9862cb703a16d/54fbb2fb43166d2279d52252462309f79152d251.jpg" alt=""><!-- raw HTML omitted --></p>
+<p>在记事本中，粘贴刚才的命令行，如下图示。</p>
+<p><!-- raw HTML omitted --><img src="https://imgsa.baidu.com/exp/w=500/sign=7e9585b2ebf81a4c2632ecc9e7286029/0df431adcbef76093990ae592edda3cc7dd99e58.jpg" alt=""><!-- raw HTML omitted --></p>
+<p>鼠标点击菜单 “文件”——“另存为”，输入文件名 ren.bat，要注意下图所示红圈中的路径及扩展名选项。</p>
+<p><!-- raw HTML omitted --><img src="https://imgsa.baidu.com/exp/w=500/sign=4ecd38df2df5e0feee1889016c6234e5/6609c93d70cf3bc721effa2ad100baa1cc112a0c.jpg" alt=""><!-- raw HTML omitted --></p>
+<p>打开 c 盘 pic 文件夹，鼠标双击 ren.bat 这个批处理文件，即可将该文件夹下的 jpg 图片，按照刚才 rename.xls 中的顺序和文件名批量修改文件名，如下图示。</p>
+<p><!-- raw HTML omitted --><img src="https://imgsa.baidu.com/exp/w=500/sign=5debaa813912b31bc76ccd29b6193674/908fa0ec08fa513d08f15a183d6d55fbb3fbd998.jpg" alt=""><!-- raw HTML omitted --></p>
+<p>自此，你已经完成了批量修改文件名的操作。我们运用了 dos 命令技巧、xls 技巧以及批处理 3 个知识点来达到批量修改文件名的效果。</p>
+<p>该经验需要有一定 dos 基础和电脑操作基础的人才能举一反三，如果掌握一定 xls 函数公式基础的话，可以把批量处理文件名玩得更溜。</p>
+<p><strong>如果本经验对你有帮助，请你鼠标点击一下 “收藏” 或“成功”给予我一点肯定哦，当然也可以给点击给我月票。</strong></p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">conanlm</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2018-05-19
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E7%94%B5%E8%84%91%E7%9F%A5%E8%AF%86/">电脑知识</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/iphone%E5%AF%BC%E5%87%BA%E7%85%A7%E7%89%87%E5%88%B0%E7%94%B5%E8%84%91/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">iPhone导出照片到电脑</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/%E5%88%A9%E7%94%A8wscript-shell%E5%AF%B9%E8%B1%A1%E9%9A%90%E8%97%8Fcmd%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BF%90%E8%A1%8C%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/">
+            <span class="next-text nav-default">利用WScript.Shell对象隐藏cmd命令行运行框的实现代码</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">conanlm</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    docsearch({
+    apiKey: "871b7911450f9c9a1e0c47d07b73987c",
+    indexName: "hugo",
+    appId: "N3M0PQ8YER",
+    inputSelector: '.docsearch-input',
+    debug: false,
+    });
+</script>
+</body>
+</html>

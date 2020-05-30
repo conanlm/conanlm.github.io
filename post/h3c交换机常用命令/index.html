@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>H3C交换机常用命令 - conanlm</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="conanlm" /><meta name="description" content="display interface  dis int b  显示端口的概要信息。不指定该参数时，将显示端口的详细信息。
+display mac-address 1 2 3 4 5 6 7 8 9  &amp;lt;Sysname&amp;gt; display mac-address 000f-e201-0101 MAC ADDR VLAN ID STATE PORT INDEX AGING TIME(s) 000f-e201-0101 1 Learned Ethernet1/0/1 AGING --- 1 mac address(es) found ---   显示MAC地址表中MAC地址为000f-e201-0101的表项的信息
+ dis mac-address vlan xxx  vlan vlan-id：显示指定VLAN的MAC地址表项。vlan-id的取值范围为1～4094。
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.62.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/h3c%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="H3C交换机常用命令" />
+<meta property="og:description" content="display interface
+   dis int b
+
+显示端口的概要信息。不指定该参数时，将显示端口的详细信息。
+display mac-address
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+&lt;Sysname&gt; display mac-address 000f-e201-0101
+
+        MAC ADDR        VLAN ID   STATE            PORT INDEX              AGING TIME(s)
+
+        000f-e201-0101  1         Learned          Ethernet1/0/1           AGING
+
+ 
+
+          ---  1 mac address(es) found  ---
+
+
+显示MAC地址表中MAC地址为000f-e201-0101的表项的信息
+    dis mac-address vlan xxx
+
+vlan vlan-id：显示指定VLAN的MAC地址表项。vlan-id的取值范围为1～4094。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/h3c%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" />
+<meta property="article:published_time" content="2018-06-30T20:53:42+08:00" />
+<meta property="article:modified_time" content="2018-06-30T20:53:42+08:00" />
+<meta itemprop="name" content="H3C交换机常用命令">
+<meta itemprop="description" content="display interface
+   dis int b
+
+显示端口的概要信息。不指定该参数时，将显示端口的详细信息。
+display mac-address
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+&lt;Sysname&gt; display mac-address 000f-e201-0101
+
+        MAC ADDR        VLAN ID   STATE            PORT INDEX              AGING TIME(s)
+
+        000f-e201-0101  1         Learned          Ethernet1/0/1           AGING
+
+ 
+
+          ---  1 mac address(es) found  ---
+
+
+显示MAC地址表中MAC地址为000f-e201-0101的表项的信息
+    dis mac-address vlan xxx
+
+vlan vlan-id：显示指定VLAN的MAC地址表项。vlan-id的取值范围为1～4094。">
+<meta itemprop="datePublished" content="2018-06-30T20:53:42&#43;08:00" />
+<meta itemprop="dateModified" content="2018-06-30T20:53:42&#43;08:00" />
+<meta itemprop="wordCount" content="1884">
+
+
+
+<meta itemprop="keywords" content="交换机," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="H3C交换机常用命令"/>
+<meta name="twitter:description" content="display interface
+   dis int b
+
+显示端口的概要信息。不指定该参数时，将显示端口的详细信息。
+display mac-address
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+&lt;Sysname&gt; display mac-address 000f-e201-0101
+
+        MAC ADDR        VLAN ID   STATE            PORT INDEX              AGING TIME(s)
+
+        000f-e201-0101  1         Learned          Ethernet1/0/1           AGING
+
+ 
+
+          ---  1 mac address(es) found  ---
+
+
+显示MAC地址表中MAC地址为000f-e201-0101的表项的信息
+    dis mac-address vlan xxx
+
+vlan vlan-id：显示指定VLAN的MAC地址表项。vlan-id的取值范围为1～4094。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">conanlm</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">conanlm</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li style="display:inline-block;margin-right:10px;">
+    <input type="search" class="docsearch-input" placeholder="Search" />
+  </li></ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">H3C交换机常用命令</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-06-30 </span>
+        <div class="post-category">
+            <a href="/categories/%E4%BA%A4%E6%8D%A2%E6%9C%BA/"> 交换机 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#display-interface">display interface</a></li>
+    <li><a href="#display-mac-address">display mac-address</a></li>
+    <li><a href="#display-ip-interface-brief">display ip interface brief</a></li>
+    <li><a href="#display-arp">display arp</a></li>
+    <li><a href="#display-mac-address-1">display mac-address</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="display-interface">display interface</h2>
+<pre><code>   dis int b
+</code></pre>
+<p>显示端口的概要信息。不指定该参数时，将显示端口的详细信息。</p>
+<h2 id="display-mac-address">display mac-address</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;Sysname&gt; display mac-address 000f-e201-0101
+
+        MAC ADDR        VLAN ID   STATE            PORT INDEX              AGING TIME(s)
+
+        000f-e201-0101  1         Learned          Ethernet1/0/1           AGING
+
+ 
+
+          ---  1 mac address(es) found  ---
+</code></pre></td></tr></table>
+</div>
+</div><p>显示MAC地址表中MAC地址为000f-e201-0101的表项的信息</p>
+<pre><code>    dis mac-address vlan xxx
+</code></pre>
+<p>vlan vlan-id：显示指定VLAN的MAC地址表项。vlan-id的取值范围为1～4094。</p>
+<h2 id="display-ip-interface-brief">display ip interface brief</h2>
+<pre><code>dis ip int b
+</code></pre>
+<p>【命令】</p>
+<p>display ip interface brief [ interface-type [ interface-number ] ]</p>
+<p>【视图】</p>
+<p>任意视图</p>
+<p>【参数】</p>
+<p>interface-type：显示指定类型接口的IP基本配置信息。</p>
+<p>interface-number：显示指定接口的IP基本配置信息。</p>
+<p>【描述】</p>
+<p>display ip interface brief用来显示三层接口的IP基本配置信息。</p>
+<p>如果不指定接口类型和接口编号，则显示所有三层接口的IP基本配置信息；如果只指定接口类型，不指定接口编号，则显示该类型所有三层接口的IP基本配置信息；如果同时指定接口类型和接口编号，则显示指定接口的IP基本配置信息。</p>
+<p>相关配置可参考命令display ip interface。</p>
+<h2 id="display-arp">display arp</h2>
+<pre><code>dis arp
+</code></pre>
+<p>【命令】</p>
+<p>display arp { { all | dynamic | static } | vlan vlan-id | interface interface-type interface-number } [ | { begin | exclude | include } string | count ]</p>
+<p>【视图】</p>
+<p>任意视图</p>
+<p>【参数】</p>
+<p>all：显示所有的ARP表项。</p>
+<p>dynamic：显示动态ARP表项。</p>
+<p>static：显示静态ARP表项。</p>
+<p>vlan vlan-id：显示指定VLAN的ARP表项，vlan-id的取值范围为1～4094。</p>
+<p>interface interface-type interface-number：显示指定端口的ARP表项。interface-type interface-number用来指定端口的类型和编号。</p>
+<p>|：使用正则表达式对显示进行过滤。有关正则表达式的字符匹配规则请参见“系统维护与调试操作”中的“命令行显示”部分。</p>
+<p>begin：显示特定行及其以后的所有行，该特定行必须包含指定正则表达式。</p>
+<p>exclude：显示不含指定正则表达式的行。</p>
+<p>include：显示包含指定正则表达式的行。</p>
+<p>string：为1～256个字符的字符串，区分大小写。</p>
+<p>count：显示ARP表项的数目。</p>
+<p>【描述】</p>
+<p>display arp命令用来显示ARP表项。</p>
+<p>相关配置可参考命令arp static和reset arp。
+【举例】
+显示所有ARP表项的信息。</p>
+<pre><code>    &lt;Sysname&gt; display arp all
+
+                    Type: S-Static    D-Dynamic
+
+    IP Address       MAC Address     VLAN ID  Interface              Aging Type
+
+    20.1.1.1         00e0-fc00-0001  N/A      N/A                    N/A   S
+
+    193.1.1.70       00e0-fe50-6503  100      GE1/0/1                14    D
+
+    192.168.0.115    000d-88f7-9f7d  1        GE1/0/2                18    D
+
+    192.168.0.39     0012-a990-2241  1        GE1/0/3                20    D
+</code></pre>
+<h2 id="display-mac-address-1">display mac-address</h2>
+<pre><code>dis mac-address
+</code></pre>
+<p>【命令】</p>
+<p>display mac-address [ mac-address [ vlan vlan-id ] | [ [ dynamic | static ] [ interface interface-type interface-number ] | blackhole ] [ vlan vlan-id ] [ count ] ] [ | { begin | exclude | include } regular-expression ]</p>
+<p>【视图】</p>
+<p>任意视图</p>
+<p>【缺省级别】</p>
+<p>1：监控级</p>
+<p>【参数】</p>
+<p>blackhole：显示黑洞MAC地址表项。黑洞MAC地址表项没有老化时间，可以添加/删除，当报文的源或目的MAC地址与黑洞MAC地址表项匹配后该报文被丢弃。</p>
+<p>vlan vlan-id：显示指定VLAN的MAC地址表项。vlan-id的取值范围为1～4094。</p>
+<p>count：显示MAC地址表项的数量。如果配置本参数，将仅显示符合条件的（由count前面的参数决定）MAC地址表项的数量，而不显示MAC地址表项的具体内容。</p>
+<p>mac-address：显示指定MAC地址的MAC地址表项，mac-address的格式为H-H-H。</p>
+<p>dynamic：显示动态MAC地址表项。动态MAC地址表项有老化时间。</p>
+<p>static：显示静态MAC地址表项。静态MAC地址表项没有老化时间。</p>
+<p>interface interface-type interface-number：显示指定端口的MAC地址表项。interface-type interface-number用来指定端口的类型和编号。</p>
+<p>|：使用正则表达式对显示信息进行过滤。有关正则表达式的详细介绍，请参见“基础配置指导”中的“CLI”。</p>
+<p>begin：从包含指定正则表达式的行开始显示。</p>
+<p>exclude：只显示不包含指定正则表达式的行。</p>
+<p>include：只显示包含指定正则表达式的行。</p>
+<p>regular-expression：表示正则表达式，为1～256个字符的字符串，区分大小写。</p>
+<p>【描述】</p>
+<p>display mac-address命令用来显示MAC地址表信息。</p>
+<p>需要注意的是：</p>
+<p>·     如果不指定任何参数，将显示所有的MAC地址表项信息（包括单播MAC地址表项信息和静态组播MAC地址表项信息）。</p>
+<p>·     如果仅指定vlan或count或同时指定这两个参数，显示信息中将同时包含单播MAC地址表项和静态组播MAC地址表项。</p>
+<p>相关配置可参考命令mac-address、mac-address timer，以及“IP组播命令参考/ IGMP Snooping配置命令”中的命令display mac-address multicast和display mac-address multicast count。</p>
+<p>【举例】显示MAC地址表中MAC地址为000f-e201-0101的表项的信息。
+<!-- raw HTML omitted --> display mac-address 000f-e201-0101</p>
+<pre><code>    MAC ADDR        VLAN ID   STATE            PORT INDEX              AGING TIME(s)
+
+    000f-e201-0101  1         Learned          GigabitEthernet1/0/1    AGING
+
+    
+
+    ---  1 mac address(es) found  --- </code></pre>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">conanlm</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2018-06-30
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA/">交换机</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E4%BF%AE%E6%94%B9ad%E5%9F%9F%E8%B4%A6%E6%88%B7%E7%AD%96%E7%95%A5/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">修改AD域账户策略</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/2003-dhcp%E8%BF%81%E7%A7%BB-2012r2/">
+            <span class="next-text nav-default">2003 dhcp迁移 2012r2</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">conanlm</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    docsearch({
+    apiKey: "871b7911450f9c9a1e0c47d07b73987c",
+    indexName: "hugo",
+    appId: "N3M0PQ8YER",
+    inputSelector: '.docsearch-input',
+    debug: false,
+    });
+</script>
+</body>
+</html>

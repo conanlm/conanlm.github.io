@@ -2,21 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cmd on conanlm</title>
-    <link>http://localhost:1313/categories/cmd/</link>
+    <link>http://conanlm.github.io/categories/cmd/</link>
     <description>Recent content in cmd on conanlm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 19 May 2018 10:39:39 +0800</lastBuildDate>
-    
-	<atom:link href="http://localhost:1313/categories/cmd/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 19 May 2018 10:39:39 +0800</lastBuildDate><atom:link href="http://conanlm.github.io/categories/cmd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>利用WScript.Shell对象隐藏cmd命令行运行框的实现代码</title>
-      <link>http://localhost:1313/post/%E5%88%A9%E7%94%A8wscript-shell%E5%AF%B9%E8%B1%A1%E9%9A%90%E8%97%8Fcmd%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BF%90%E8%A1%8C%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/</link>
+      <link>http://conanlm.github.io/post/%E5%88%A9%E7%94%A8wscript-shell%E5%AF%B9%E8%B1%A1%E9%9A%90%E8%97%8Fcmd%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BF%90%E8%A1%8C%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/</link>
       <pubDate>Sat, 19 May 2018 10:39:39 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/%E5%88%A9%E7%94%A8wscript-shell%E5%AF%B9%E8%B1%A1%E9%9A%90%E8%97%8Fcmd%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BF%90%E8%A1%8C%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/</guid>
+      <guid>http://conanlm.github.io/post/%E5%88%A9%E7%94%A8wscript-shell%E5%AF%B9%E8%B1%A1%E9%9A%90%E8%97%8Fcmd%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BF%90%E8%A1%8C%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/</guid>
       <description>&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;WScript.Shell（Windows Script Host Runtime Library）是一个对象，对应的文件是C:\WINDOWS\system32\wshom.ocx，Wscript.shell是服务器系统会用到的一种组件。shell 就是“壳”的意思，这个对象可以执行操作系统外壳常用的操作，比如运行程序、读写注册表、环境变量等。这个对象通常被用在VB或VBS编程中。&lt;/p&gt;
@@ -33,10 +29,10 @@
     
     <item>
       <title>使用批处理文件同时打多个CMD窗口且执行多条命令</title>
-      <link>http://localhost:1313/post/%E4%BD%BF%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E5%90%8C%E6%97%B6%E6%89%93%E5%A4%9A%E4%B8%AAcmd%E7%AA%97%E5%8F%A3%E4%B8%94%E6%89%A7%E8%A1%8C%E5%A4%9A%E6%9D%A1%E5%91%BD%E4%BB%A4/</link>
+      <link>http://conanlm.github.io/post/%E4%BD%BF%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E5%90%8C%E6%97%B6%E6%89%93%E5%A4%9A%E4%B8%AAcmd%E7%AA%97%E5%8F%A3%E4%B8%94%E6%89%A7%E8%A1%8C%E5%A4%9A%E6%9D%A1%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Sat, 19 May 2018 10:39:20 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/%E4%BD%BF%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E5%90%8C%E6%97%B6%E6%89%93%E5%A4%9A%E4%B8%AAcmd%E7%AA%97%E5%8F%A3%E4%B8%94%E6%89%A7%E8%A1%8C%E5%A4%9A%E6%9D%A1%E5%91%BD%E4%BB%A4/</guid>
+      <guid>http://conanlm.github.io/post/%E4%BD%BF%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E5%90%8C%E6%97%B6%E6%89%93%E5%A4%9A%E4%B8%AAcmd%E7%AA%97%E5%8F%A3%E4%B8%94%E6%89%A7%E8%A1%8C%E5%A4%9A%E6%9D%A1%E5%91%BD%E4%BB%A4/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;使用批处理文件时，可以用下面方法打打多个CMD窗口，并且每个窗口中执行多条命令。&lt;/li&gt;
 &lt;/ul&gt;

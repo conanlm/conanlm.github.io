@@ -2,21 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>交换机 on conanlm</title>
-    <link>http://localhost:1313/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA/</link>
+    <link>http://conanlm.github.io/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA/</link>
     <description>Recent content in 交换机 on conanlm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 30 Jun 2018 20:53:42 +0800</lastBuildDate>
-    
-	<atom:link href="http://localhost:1313/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 30 Jun 2018 20:53:42 +0800</lastBuildDate><atom:link href="http://conanlm.github.io/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>H3C交换机常用命令</title>
-      <link>http://localhost:1313/post/h3c%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>http://conanlm.github.io/post/h3c%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Sat, 30 Jun 2018 20:53:42 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/h3c%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>http://conanlm.github.io/post/h3c%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>&lt;h2 id=&#34;display-interface&#34;&gt;display interface&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;   dis int b
 &lt;/code&gt;&lt;/pre&gt;

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Rust交叉编译相关总结 - conanlm</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="conanlm" /><meta name="description" content="【GUI 程序最好还是在各个平台编译，跨平台编译一大堆问题（我这边是报错了），源码跨平台也很不错了（而且如果是 Windows，最好是在 win7 编译，" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.76.5 with theme even" />
+
+
+<link rel="canonical" href="http://conanlm.github.io/post/rust%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E7%9B%B8%E5%85%B3%E6%80%BB%E7%BB%93/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.564ac3b9fe418028b13effcb81f82fb70606e5f489f3b2b054656e6613d843d0.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Rust交叉编译相关总结" />
+<meta property="og:description" content="【GUI 程序最好还是在各个平台编译，跨平台编译一大堆问题（我这边是报错了），源码跨平台也很不错了（而且如果是 Windows，最好是在 win7 编译，" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://conanlm.github.io/post/rust%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E7%9B%B8%E5%85%B3%E6%80%BB%E7%BB%93/" />
+<meta property="article:published_time" content="2020-10-28T21:35:02+08:00" />
+<meta property="article:modified_time" content="2020-10-28T21:35:02+08:00" />
+<meta itemprop="name" content="Rust交叉编译相关总结">
+<meta itemprop="description" content="【GUI 程序最好还是在各个平台编译，跨平台编译一大堆问题（我这边是报错了），源码跨平台也很不错了（而且如果是 Windows，最好是在 win7 编译，">
+<meta itemprop="datePublished" content="2020-10-28T21:35:02+08:00" />
+<meta itemprop="dateModified" content="2020-10-28T21:35:02+08:00" />
+<meta itemprop="wordCount" content="4590">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Rust交叉编译相关总结"/>
+<meta name="twitter:description" content="【GUI 程序最好还是在各个平台编译，跨平台编译一大堆问题（我这边是报错了），源码跨平台也很不错了（而且如果是 Windows，最好是在 win7 编译，"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">conanlm</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">conanlm</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li style="display:inline-block;margin-right:10px;">
+    <input type="search" class="docsearch-input" placeholder="Search" />
+  </li></ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Rust交叉编译相关总结</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-10-28 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>【GUI 程序最好还是在各个平台编译，跨平台编译一大堆问题（我这边是报错了），源码跨平台也很不错了（而且如果是 Windows，最好是在 win7 编译，这样能支持 win8 和 10，而在 win10 编译的在 win7 和 8 可能运行不了），可以装虚拟机专门用于多平台编译】</p>
+<p>通过命令查看支持哪些 OS 和 CPU 架构</p>
+<p>rustc &ndash;print target-list | pr -tw100 &ndash;columns 3</p>
+<p>toolchain 和 target 分别是，toolchain 是交叉编译所需的 “编译工具”，而 target 则是编译到目标平台所需的 “库文件”，</p>
+<p>比如 Ubuntu 默认的 target 是 gnu 的，依赖 glibc，但是其他 Linux 系统未必是 glibc 是基础库，但是可以用同一套 toolchain（编译器之类的），因此只需要添加 target 即可；</p>
+<p>而交叉编译到 Windows，则 Linux 的编译器是没有这个能力的，因此需要添加 Windows 平台的 toolchain（有部分 tool 官方没有实现还得添加第三方的 tool），然后再添加 target。</p>
+<p>注意，如果 Windows 选择的是 msvc 而非 gnu，那么哪怕是最简单的 hello world 也必须要安装 visual studio（主要是需要它携带的 toolchain【linker 等】）</p>
+<p>通过 ldd 命令可以查看编译出来的程序是否依赖动态链接库：</p>
+<p>1. 先普通编译，比如 cargo build &ndash;release（没有 &ndash;release 则是编译在 debug 目录）</p>
+<p>2. 通过 ldd 命令查看：ldd target/release/bin-name（bin-name 是编译的可执行程序名字）</p>
+<p>可以看到类似这样的输出：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">    linux-vdso.so.1 (0x00007ffd488b6000)
+    libdl.so.2 =&gt; /lib/x86\_64-linux-gnu/libdl.so.2 (0x00007ff9c19e6000)
+    librt.so.1 =&gt; /lib/x86\_64-linux-gnu/librt.so.1 (0x00007ff9c17de000)
+    libpthread.so.0 =&gt; /lib/x86\_64-linux-gnu/libpthread.so.0 (0x00007ff9c15bf000)
+    libgcc\_s.so.1 =&gt; /lib/x86\_64-linux-gnu/libgcc\_s.so.1 (0x00007ff9c13a7000)
+    libc.so.6 =&gt; /lib/x86\_64-linux-gnu/libc.so.6 (0x00007ff9c0fb6000)
+    /lib64/ld-linux-x86-64.so.2 (0x00007ff9c1e1f000)
+
+</code></pre></td></tr></table>
+</div>
+</div><p>说明是依赖了各类库的；</p>
+<p>3. 现在我们通过安装 musl-libc 工具链（比 glibc【gnu-libc】要更轻量级）</p>
+<p><code>rustup target add x86_64-unknown-linux-musl（可以加--toolchain=stable，但是默认是stable，也可以安装nightly的）【可以用rustup show查看安装了哪些工具链，可以看到stable-x86_64-unknown-linux-gnu是默认的工具链】  </code></p>
+<p><code>【注意，目前PC的话大多处理器架构都是x86_64的，如果目标运行机器不是这个架构的需要做出调整，Linux可以通过arch命令查看处理器架构，Windows通过systeminfo查看，而且据说x86_64,x64,AMD64是同一个架构】</code></p>
+<p>接着通过 cargo build &ndash;release &ndash;target=x86_64-unknown-linux-musl 编译出来后在 target 里会有个 x86_64-unknown-linux-musl 目录，里面又根据 &ndash;release 有 debug 和 release 目录；</p>
+<p>接着我们再通过 ldd 命令查看在 x86_64-unknown-linux-musl 里的可执行程序，发现它不再依赖 glibc 这些库了【不是动态可执行文件（即静态可执行文件）】（程序大小大了一些，但多的不是很多）；</p>
+<p>一、<strong>在 Ubuntu 下编译 Windows10 的程序</strong></p>
+<p>1.rustup toolchain install stable-x86_64-pc-windows-gnu【用 msvc 的有问题，我这边编译失败】</p>
+<p>2.rustup target add x86_64-pc-windows-gnu &ndash;toolchain=stable</p>
+<p>3. 安装 linker：sudo apt install mingw-w64（ubuntu 是这个命令，如果是其他 Linux 系统可以通过搜索关键字 mingw-w64，然后描述是 Development environment targeting 32- and 64-bit Windows 的基本上就是了）</p>
+<p>4. 在项目根目录创建. cargo 目录，然后创建. cargo/config 文件，在 config 文件里写：【注意，也可以全局配置，即~/.cargo/config，这里可以配置多个 target.xxx 和其相关的 linker，比如这里还可以配置一个 MacOS 的】</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">\[target.x86\_64-pc-windows-gnu\]
+linker = &#34;x86\_64-w64-mingw32-gcc&#34;
+ar = &#34;x86\_64-w64-mingw32-gcc-ar&#34;
+
+</code></pre></td></tr></table>
+</div>
+</div><p>也可以指定绝对路径：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">linker = &#34;/usr/bin/x86\_64-w64-mingw32-gcc&#34;
+ar = &#34;/usr/bin/x86\_64-w64-mingw32-ar&#34;
+
+</code></pre></td></tr></table>
+</div>
+</div><p>5.cargo build &ndash;release &ndash;target=x86_64-pc-windows-gnu，然后在 target 目录里有 x86_64-pc-windows-gnu 目录里有 release 目录可以找到对应可执行文件；</p>
+<p>x86_64-pc-windows-gnu 的程序用 ldd 查看也是不依赖动态库的；</p>
+<p>二、<strong>在 Ubuntu 下编译 Windows7 的程序</strong>（和 Ubuntu 交叉编译到 Windows10 的步骤一致，该步骤生成的可执行程序可以直接运行在 Win7 上【gui 之类的 “高级” 程序不一定】）</p>
+<p>三、<strong>在 Ubuntu 下编译 MacOS 的程序</strong>（待测）</p>
+<p>1.rustup toolchain install stable-x86_64-apple-darwin【如果没有用 rustup 是可以网上下载相关文件到指定位置的，具体可以再 Google 一下】</p>
+<p>2.rustup target add x86_64-apple-darwin &ndash;toolchain=stable</p>
+<p>3. 执行命令安装 Mac OS 跨平台编译工具链：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">git clone https://github.com/tpoechtrager/osxcross
+cd osxcross
+wget -nc https://s3.dockerproject.org/darwin/v2/MacOSX10.10.sdk.tar.xz
+mv MacOSX10.10.sdk.tar.xz tarballs/
+UNATTENDED=yes OSX\_VERSION\_MIN=10.10 ./build.sh
+
+</code></pre></td></tr></table>
+</div>
+</div><p>（暂时废弃，这里提示 clang 依赖冲突。。）</p>
+<p>四、在 Ubuntu 下编译至其他 Linux 的程序【这里可以使用 musl-libc 将它内嵌到程序里实现跨多个平台的 Linux 程序（glibc 是绝对路径，也可以在目标机器上安装 glibc）】</p>
+<p>1.<code>rustup target add x86_64-unknown-linux-musl【下载x86_64任意版本Linux musl-libc库工具链】</code></p>
+<p>2.cargo build &ndash;release &ndash;target=x86_64-unknown-linux-musl【如果依赖了 openSSL 还需要一些额外的配置】</p>
+<p>3. 用命令测试一下生成的可执行文件在目标机器、平台上是否可以运行：cargo test &ndash;target x86_64-unknown-linux-musl【最好还是复制到目标机器、平台运行一下看看。。（我这边 test ubuntu 到 Windows 的交叉编译的 exe 是失败，然后直接在 Windows 上跑是 OK 的）】</p>
+<p>4. 还要用 ldd 看下是否有依赖</p>
+<p>五、在 Windows10 下编译 Linux 的程序（待试）</p>
+<p>六、<strong>在 Windows10 下编译为 Windows7 的程序</strong>（跨系统的程序一般和是否是 release 模式无关，不过调试完毕最好还是生成 release 的可执行程序比较好）</p>
+<p>1. 首先需要在项目根目录下创建. cargo/config 文件，在文件里添加：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">\[target.x86\_64-pc-windows-msvc\]
+rustflags = \[&#34;-C&#34;, &#34;target-feature=+crt-static&#34;\]
+
+</code></pre></td></tr></table>
+</div>
+</div><p>上面的配置就是弄<strong>静态编译</strong>用的，否则 Windows 下编译好的程序，由于依赖了动态链接库，把它弄到另一个 Windows10 或 Win7 下就不能运行了。</p>
+<p>【但是注意，即便配置了上面的东西，对于一些程序换到另一个系统运行的时候仍然会出现缺失依赖的情况（主要是系统级的依赖库，rust 不会将它们链接进来【而且由于 Windows 很多 dll 是 C++ 写的，也可能是做不到对它们静态编译，毕竟 rust ffi 只能针对部分 C++】）。。比如 iced GUI 程序（自己用 cygcheck【Windows 版 ldd】查看了下还是依赖了 dll 库，比如依赖了这些库：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"> C:\\Windows\\system32\\ADVAPI32.dll
+    C:\\Windows\\system32\\msvcrt.dll
+      C:\\Windows\\system32\\ntdll.dll
+      C:\\Windows\\system32\\KERNELBASE.dll
+    C:\\Windows\\system32\\SECHOST.dll
+      C:\\Windows\\system32\\RPCRT4.dll
+    C:\\Windows\\system32\\KERNEL32.dll
+  C:\\Windows\\system32\\COMCTL32.dll
+    C:\\Windows\\system32\\GDI32.dll
+    C:\\Windows\\system32\\USER32.dll
+      C:\\Windows\\system32\\win32u.dll
+  C:\\Windows\\system32\\D3DCOMPILER\_47.dll
+    C:\\Windows\\system32\\CRYPTSP.dll
+  C:\\Windows\\system32\\dwmapi.dll
+  C:\\Windows\\system32\\ole32.dll
+    C:\\Windows\\system32\\combase.dll
+      C:\\Windows\\system32\\bcryptPrimitives.dll
+  C:\\Windows\\system32\\SHELL32.dll
+  C:\\Windows\\system32\\UxTheme.dll
+
+</code></pre></td></tr></table>
+</div>
+</div><p>不过可以看到，它们都是系统库，所以换成另一个同系统运行是没问题的（我在 Windows10 下编译，换成另一台没装 vs2017 和 rust 的 win10 可以运行，但是换成 win7 就不行）</p>
+<p>也可以先通过 cygcheck 命令找出依赖了哪些库，然后把这些库复制到可执行程序同级目录然后再在 win7 里应该也是可以的（我这边用于测试的程序由于依赖库又依赖了其它库所以不行（不过可以试着网上找缺失的 dll 放到程序所在目录【如果知道原来是来自哪里，则最好是放在对应的目录，比如 System32 目录，不知道的情况下放程序所在目录】）【不需要复制所有的依赖库，毕竟 win7 和 win10 有部分系统库还是一样的】【后面我用 360 来安装了所需的依赖库，程序可以打开了，但是最终还是执行失败，所以最好还是在同一个系统里编译比较好（控制台程序基本上不用）】）</p>
+<p>）】</p>
+<p>注意，如果程序<strong>编译好了却不能运行正常</strong>（假设不是代码逻辑问题），做成静态编译可能就能成功了（或者是切换为 release 就成功了，反正有点玄学），我这边用 iced 写的 gui 程序就是，debug 的程序运行不正常，但是 release 模式的却可以；</p>
+<p>2. 安装 Visual Studio 2017【vs2015 或 2013 有部分程序没法编译成功【应该是因为 DX12 的原因】（但是 <strong>vs2017 编译的程序兼容性不好</strong>，GUI 程序哪怕后端选了 OpenGL 编译后的仍然不能在 win7 上工作，所以<strong>最好还是用 vs2013（至少 C++ 部分，其他版本 vs 的就不要装 c++ 模块了）</strong>，对于部分不能编译的再考虑 vs2017）】，在安装界面勾选工作负载下的 Windows 类别下的使用 C++ 的桌面开发这一项（当然还可以勾选更多）【安装好后最好重启下电脑】</p>
+<p>3. 上面是 msvc 的，还可以用 gnu 的，需要先 <a href="https://sourceforge.net/projects/mingw-w64/files">https://sourceforge.net/projects/mingw-w64/files</a> / 下载 MinGW 压缩包（注意下载最新的，不是上面所谓的 latest，目前最新的是 <a href="https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-posix/seh/x86">https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-posix/seh/x86</a>_64-8.1.0-release-posix-seh-rt_v6-rev0.7z/download 这个，可以参考：https://www.cnblogs.com/qq67579722/p/12897819.html），然后解压到某目录，配置 MinGW 的 bin 目录到 Path 环境变量里（我这边是 R:/mingw64/bin，注意 MinGW 如果下载了多个版本，只能有一个版本的 bin 添加到 path 目录，否则可能有问题【而且要注意其他程序里是否也有 mingw 子目录配置到了 Path，比如 Git 安装后就会，要先把它从 Path 删掉重开 console，可以用 echo %Path% 查看 Path 变更是否生效，build 后用 cygcheck 检查下看有没有依赖不合理的 dll】），注意配置了 Path 需要重开终端，否则是读取不到的，可以输入 g++.exe 测试一下看当前 console 是否有 mingw64/bin 的 Path，而且配置了 mingw64/bin 是可以不配置. cargo/config 的 linker，ar 的（但是 Path 必须配置），接着执行：cargo build &ndash;release &ndash;target=x86_64-pc-windows-gnu 就能顺利编译了【比 msvc 的大了好多倍。。】（不过即便是 gnu 编译出来的 GUI 程序【自己用的 iced】也还是没法在 win7 上跑【自己在 Windows10 编译的】，蛋疼。。）；【目前而言经过测试用 GNU+MinGW64 编译的程序不仅比 msvc 的大（而且可能也更慢），而且该依赖的系统库一个不少，还多依赖了一些 MinGW64 的 dll（而且是配置了静态编译参数【除非 gnu 的静态编译参数不是这么配置，或者就是 mingw 库也无法静态编译到程序里】），所以还是老老实实用 msvc 的吧，GUI 程序不能跨 win10，win7 就算了，在 win10，win7 各编译一遍（Windows 版的 MinGW 方案不好用，但是可以考虑用 win10 的 Linux 子系统来实现，或者用 MSYS2（类似一个 Linux 终端））】</p>
+<p>【在 Windows 下用 gnu 哪怕静态编译一个 hello world 也是会依赖系统依赖库（msvc 的反而依赖的更少一些），而在 Ubuntu 里交叉编译到 Windows 平台，编译出来的 hello world 程序也一样会依赖系统库。。】</p>
+<p>七、在 Windows10 下编译为 MacOS 的程序（待试）</p>
+<p>八、<strong>Windows7 系统下编译 Windows7、Windows10 的程序</strong>（8 没系统就不测了）</p>
+<p>【控制台程序一般是没问题的，测下 iced 的 GUI 程序是否可以运行，如果 win10，win7 都可以运行，那么下次 Windows10 也安装 vs2013 好了（2013，2012 都不行）】</p>
+<p>1. 下载 visual studio2013 安装，注意如果你的 win7 的 IE 是 8 它会不允许你安装 visual studio2013，解决办法可以是先关闭 visual studio2013 安装程序，然后在桌面新建 1.bat 文件，里面填写：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">@ECHO OFF
+:IE10HACK 
+REG ADD &#34;HKLM\\SOFTWARE\\Wow6432Node\\Microsoft\\Internet Explorer&#34; /v Version /t REG\_SZ /d &#34;9.10.9200.16384&#34; /f 
+REG ADD &#34;HKLM\\SOFTWARE\\Wow6432Node\\Microsoft\\Internet Explorer&#34; /v svcVersion /t REG\_SZ /d &#34;10.0.9200.16384&#34; /f 
+REG ADD &#34;HKLM\\SOFTWARE\\Microsoft\\Internet Explorer&#34; /v Version /t REG\_SZ /d &#34;9.10.9200.16384&#34; /f 
+REG ADD &#34;HKLM\\SOFTWARE\\Microsoft\\Internet Explorer&#34; /v svcVersion /t REG\_SZ /d &#34;10.0.9200.16384&#34; /f 
+GOTO EXIT
+:REVERTIE 
+REG DELETE &#34;HKLM\\SOFTWARE\\Wow6432Node\\Microsoft\\Internet Explorer&#34; /v svcVersion 
+REG DELETE &#34;HKLM\\SOFTWARE\\Microsoft\\Internet Explorer&#34; /v svcVersion 
+REG ADD &#34;HKLM\\SOFTWARE\\Wow6432Node\\Microsoft\\Internet Explorer&#34; /v Version /t REG\_SZ /d &#34;8.0.7601.17514&#34; /f 
+REG ADD &#34;HKLM\\SOFTWARE\\Microsoft\\Internet Explorer&#34; /v Version /t REG\_SZ /d &#34;8.0.7601.17514&#34; /f 
+GOTO EXIT
+ 
+:EXIT
+
+</code></pre></td></tr></table>
+</div>
+</div><p>保存后以管理员权限执行，然后再次打开 visual studio2013 就可以安装了；</p>
+<p>2. 安装 vs2013 里必需勾选 C++ 相关的内容</p>
+<p>3. 接下来就可以直接 cargo build 来编译项目了（注意有部分项目 vs2013 没法链接【应该是 gui 程序默认用了 DX12 导致的】，需要 vs2017 以上）</p>
+<p>4. 我这边测试是可以直接运行在 win10 上（【但是纯净版的复制上去一运行就自动关闭了。。（在朋友那有更新过的 win10 系统再测试一下【之前测试是 OK 的】），win7 编译出的复制到刚装的 win7 上一打开也是关闭了，也没有应用日志，不知道什么原因】哪怕是 gui 程序，不过我 gui 程序后端是 OpenGL 而非 DirectX11 或 12【不是游戏的话就用 OpenGL，各个平台兼容性都比较好】）</p>
+<p>【控制台程序则一点问题都没有，所以 GUI 程序最好还是不要跨平台编译】</p>
+<p>八、编译为 wasm 程序【前提是这个应用程序是可以编译为 wasm 的程序】</p>
+<p>1.rustup target add wasm32-unknown-unknown【只需要执行一次】</p>
+<p>2.cargo build &ndash;target=wasm32-unknown-unknown【可以加 &ndash;release】</p>
+<p>3.<code>cargo</code> <code>install</code> <code>wasm-bindgen-cli</code>【只需要执行一次，类似安装程序一样，过程有点久】</p>
+<p>4. 第三步好了后就可以用 wasm-bindgen 命令了，在项目根目录输入：wasm-bindgen target/wasm32-unknown-unknown/debug/demo-iced.wasm &ndash;out-dir ./wasm-dist &ndash;web【注意<strong>第二步已经生成</strong>了 target/wasm32-unknown-unknown/debug/demo-iced.wasm，但第四步生成的 wasm-dist 目录里的才是最终的. wasm 文件，还有一个加载 wasm 的 js 文件】</p>
+<p>5. 项目根目录生成了 wasm-dist 目录，里面有 4 个文件，两个 ts 文件可以删除，然后在 wasm-dist 目录创建 index.html 文件，里面写</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv=&#34;Content-type&#34; content=&#34;text/html; charset=utf-8&#34;/&gt;
+    &lt;meta &gt;
+    &lt;title&gt;WASM - Iced&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;script type=&#34;module&#34;&gt;
+      import init from &#34;./demo-iced.js&#34;;
+
+      init(&#39;./demo-iced\_bg.wasm&#39;);
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">conanlm</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-10-28
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/hexo-%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7%E5%92%8C-next-%E4%B8%BB%E9%A2%98/">
+            <span class="next-text nav-default">Hexo 版本升级和 Next 主题</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="http://conanlm.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">conanlm</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    docsearch({
+    apiKey: "871b7911450f9c9a1e0c47d07b73987c",
+    indexName: "hugo",
+    appId: "N3M0PQ8YER",
+    inputSelector: '.docsearch-input',
+    debug: false,
+    });
+</script>
+</body>
+</html>

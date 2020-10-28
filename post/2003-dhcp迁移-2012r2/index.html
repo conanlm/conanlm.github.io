@@ -24,10 +24,10 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.1 with theme even" />
+<meta name="generator" content="Hugo 0.76.5 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/2003-dhcp%E8%BF%81%E7%A7%BB-2012r2/" />
+<link rel="canonical" href="http://conanlm.github.io/post/2003-dhcp%E8%BF%81%E7%A7%BB-2012r2/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -36,7 +36,7 @@
 
 
 
-<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="/sass/main.min.564ac3b9fe418028b13effcb81f82fb70606e5f489f3b2b054656e6613d843d0.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -44,19 +44,20 @@
 <meta property="og:description" content="在2003服务器上导出dhcp配置文件
 netsh dhcp server dump &gt; c:\win2003dump.txt" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/2003-dhcp%E8%BF%81%E7%A7%BB-2012r2/" />
+<meta property="og:url" content="http://conanlm.github.io/post/2003-dhcp%E8%BF%81%E7%A7%BB-2012r2/" />
 <meta property="article:published_time" content="2018-05-28T21:13:26+08:00" />
 <meta property="article:modified_time" content="2018-05-28T21:13:26+08:00" />
 <meta itemprop="name" content="2003 dhcp迁移 2012r2">
 <meta itemprop="description" content="在2003服务器上导出dhcp配置文件
 netsh dhcp server dump &gt; c:\win2003dump.txt">
-<meta itemprop="datePublished" content="2018-05-28T21:13:26&#43;08:00" />
-<meta itemprop="dateModified" content="2018-05-28T21:13:26&#43;08:00" />
+<meta itemprop="datePublished" content="2018-05-28T21:13:26+08:00" />
+<meta itemprop="dateModified" content="2018-05-28T21:13:26+08:00" />
 <meta itemprop="wordCount" content="583">
 
 
 
-<meta itemprop="keywords" content="dhcp,Hyper-V," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="dhcp,Hyper-V," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="2003 dhcp迁移 2012r2"/>
 <meta name="twitter:description" content="在2003服务器上导出dhcp配置文件
 netsh dhcp server dump &gt; c:\win2003dump.txt"/>
@@ -138,18 +139,18 @@ netsh dhcp server dump &gt; c:\win2003dump.txt"/>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#2003dhcp">在2003服务器上导出dhcp配置文件</a></li>
-    <li><a href="#ipip">运行下列命令，ip改为服务器ip</a></li>
-    <li><a href="#2003dhcp-1">2003上导出dhcp</a></li>
-    <li><a href="#2012r2">在2012r2上导入</a></li>
+    <li><a href="#在2003服务器上导出dhcp配置文件">在2003服务器上导出dhcp配置文件</a></li>
+    <li><a href="#运行下列命令ip改为服务器ip">运行下列命令，ip改为服务器ip</a></li>
+    <li><a href="#2003上导出dhcp">2003上导出dhcp</a></li>
+    <li><a href="#在2012r2上导入">在2012r2上导入</a></li>
   </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <h2 id="2003dhcp">在2003服务器上导出dhcp配置文件</h2>
+      <h2 id="在2003服务器上导出dhcp配置文件">在2003服务器上导出dhcp配置文件</h2>
 <p><code>netsh dhcp server dump &gt; c:\win2003dump.txt</code></p>
-<h2 id="ipip">运行下列命令，ip改为服务器ip</h2>
+<h2 id="运行下列命令ip改为服务器ip">运行下列命令，ip改为服务器ip</h2>
 <pre><code>netsh Dhcp Server 10.155.155.10 delete Class &quot;默认路由和远程访问类别&quot; &quot;远程访问客户端的用户类别&quot; 525241532e4d6963726f736f6674 0 b
 netsh Dhcp Server 10.155.155.10 delete Class &quot;默认 BOOTP 的类别&quot; &quot;BOOTP 客户端的用户类别&quot; 424f4f54502e4d6963726f736f6674 0 b
 netsh Dhcp Server 10.155.155.10 delete Class &quot;Microsoft Windows 2000 选项&quot; &quot;Windows 2000 客户端的 Microsoft 供应商特定选项&quot; 4d53465420352e30 1 b
@@ -165,10 +166,10 @@ netsh Dhcp Server 10.155.155.10 Add Class &quot;Microsoft Windows 2000 选项&qu
 netsh Dhcp Server 10.155.155.10 Add Class &quot;Microsoft Windows 98 选项&quot; &quot;Windows 98 客户端的 Microsoft 供应商特定选项&quot; 4d534654203938 1 b
 netsh Dhcp Server 10.155.155.10 Add Class &quot;Microsoft 选项&quot; &quot;适用于 Windows 98 和 Windows 2000 客户端的 Microsoft 供应商特定选项&quot; 4d534654 1 b
 </code></pre>
-<h2 id="2003dhcp-1">2003上导出dhcp</h2>
+<h2 id="2003上导出dhcp">2003上导出dhcp</h2>
 <pre><code>netsh dhcp server export c:\dhcp.txt all
 </code></pre>
-<h2 id="2012r2">在2012r2上导入</h2>
+<h2 id="在2012r2上导入">在2012r2上导入</h2>
 <pre><code>netsh dhcp server import c:\dhcp.txt
 </code></pre>
     </div>
@@ -219,7 +220,7 @@ netsh Dhcp Server 10.155.155.10 Add Class &quot;Microsoft 选项&quot; &quot;适
 
     <footer id="footer" class="footer">
       <div class="social-links">
-  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  <a href="http://conanlm.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">

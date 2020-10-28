@@ -2,24 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DNS on conanlm</title>
-    <link>http://localhost:1313/tags/dns/</link>
+    <link>http://conanlm.github.io/tags/dns/</link>
     <description>Recent content in DNS on conanlm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 28 May 2018 21:13:09 +0800</lastBuildDate>
-    
-	<atom:link href="http://localhost:1313/tags/dns/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 28 May 2018 21:13:09 +0800</lastBuildDate><atom:link href="http://conanlm.github.io/tags/dns/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DNS添加转发器</title>
-      <link>http://localhost:1313/post/dns%E6%B7%BB%E5%8A%A0%E8%BD%AC%E5%8F%91%E5%99%A8/</link>
+      <link>http://conanlm.github.io/post/dns%E6%B7%BB%E5%8A%A0%E8%BD%AC%E5%8F%91%E5%99%A8/</link>
       <pubDate>Mon, 28 May 2018 21:13:09 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/dns%E6%B7%BB%E5%8A%A0%E8%BD%AC%E5%8F%91%E5%99%A8/</guid>
-      <description>&lt;h3 id=&#34;dns&#34;&gt;添加DNS服务器&lt;/h3&gt;
+      <guid>http://conanlm.github.io/post/dns%E6%B7%BB%E5%8A%A0%E8%BD%AC%E5%8F%91%E5%99%A8/</guid>
+      <description>&lt;h3 id=&#34;添加dns服务器&#34;&gt;添加DNS服务器&lt;/h3&gt;
 &lt;p&gt;下一步就可以了&lt;/p&gt;
-&lt;h3 id=&#34;dns-1&#34;&gt;DNS右键属性&lt;/h3&gt;</description>
+&lt;h3 id=&#34;dns右键属性&#34;&gt;DNS右键属性&lt;/h3&gt;</description>
     </item>
     
   </channel>

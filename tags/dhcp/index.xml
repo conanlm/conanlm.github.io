@@ -2,22 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>dhcp on conanlm</title>
-    <link>http://localhost:1313/tags/dhcp/</link>
+    <link>http://conanlm.github.io/tags/dhcp/</link>
     <description>Recent content in dhcp on conanlm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 28 May 2018 21:13:26 +0800</lastBuildDate>
-    
-	<atom:link href="http://localhost:1313/tags/dhcp/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 28 May 2018 21:13:26 +0800</lastBuildDate><atom:link href="http://conanlm.github.io/tags/dhcp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2003 dhcp迁移 2012r2</title>
-      <link>http://localhost:1313/post/2003-dhcp%E8%BF%81%E7%A7%BB-2012r2/</link>
+      <link>http://conanlm.github.io/post/2003-dhcp%E8%BF%81%E7%A7%BB-2012r2/</link>
       <pubDate>Mon, 28 May 2018 21:13:26 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/2003-dhcp%E8%BF%81%E7%A7%BB-2012r2/</guid>
-      <description>&lt;h2 id=&#34;2003dhcp&#34;&gt;在2003服务器上导出dhcp配置文件&lt;/h2&gt;
+      <guid>http://conanlm.github.io/post/2003-dhcp%E8%BF%81%E7%A7%BB-2012r2/</guid>
+      <description>&lt;h2 id=&#34;在2003服务器上导出dhcp配置文件&#34;&gt;在2003服务器上导出dhcp配置文件&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;netsh dhcp server dump &amp;gt; c:\win2003dump.txt&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     

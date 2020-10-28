@@ -2,21 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>vbs on conanlm</title>
-    <link>http://localhost:1313/tags/vbs/</link>
+    <link>http://conanlm.github.io/tags/vbs/</link>
     <description>Recent content in vbs on conanlm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 19 May 2018 10:39:39 +0800</lastBuildDate>
-    
-	<atom:link href="http://localhost:1313/tags/vbs/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 19 May 2018 10:39:39 +0800</lastBuildDate><atom:link href="http://conanlm.github.io/tags/vbs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>利用WScript.Shell对象隐藏cmd命令行运行框的实现代码</title>
-      <link>http://localhost:1313/post/%E5%88%A9%E7%94%A8wscript-shell%E5%AF%B9%E8%B1%A1%E9%9A%90%E8%97%8Fcmd%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BF%90%E8%A1%8C%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/</link>
+      <link>http://conanlm.github.io/post/%E5%88%A9%E7%94%A8wscript-shell%E5%AF%B9%E8%B1%A1%E9%9A%90%E8%97%8Fcmd%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BF%90%E8%A1%8C%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/</link>
       <pubDate>Sat, 19 May 2018 10:39:39 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/%E5%88%A9%E7%94%A8wscript-shell%E5%AF%B9%E8%B1%A1%E9%9A%90%E8%97%8Fcmd%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BF%90%E8%A1%8C%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/</guid>
+      <guid>http://conanlm.github.io/post/%E5%88%A9%E7%94%A8wscript-shell%E5%AF%B9%E8%B1%A1%E9%9A%90%E8%97%8Fcmd%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BF%90%E8%A1%8C%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/</guid>
       <description>&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;WScript.Shell（Windows Script Host Runtime Library）是一个对象，对应的文件是C:\WINDOWS\system32\wshom.ocx，Wscript.shell是服务器系统会用到的一种组件。shell 就是“壳”的意思，这个对象可以执行操作系统外壳常用的操作，比如运行程序、读写注册表、环境变量等。这个对象通常被用在VB或VBS编程中。&lt;/p&gt;

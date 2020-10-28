@@ -2,22 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>激活 on conanlm</title>
-    <link>http://localhost:1313/tags/%E6%BF%80%E6%B4%BB/</link>
+    <link>http://conanlm.github.io/tags/%E6%BF%80%E6%B4%BB/</link>
     <description>Recent content in 激活 on conanlm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 19 May 2018 10:16:37 +0000</lastBuildDate>
-    
-	<atom:link href="http://localhost:1313/tags/%E6%BF%80%E6%B4%BB/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 19 May 2018 10:16:37 +0000</lastBuildDate><atom:link href="http://conanlm.github.io/tags/%E6%BF%80%E6%B4%BB/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>windows和office激活</title>
-      <link>http://localhost:1313/post/windows%E5%92%8Coffice%E6%BF%80%E6%B4%BB/</link>
+      <link>http://conanlm.github.io/post/windows%E5%92%8Coffice%E6%BF%80%E6%B4%BB/</link>
       <pubDate>Sat, 19 May 2018 10:16:37 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/windows%E5%92%8Coffice%E6%BF%80%E6%B4%BB/</guid>
-      <description>&lt;h2 id=&#34;windows&#34;&gt;激活windows&lt;/h2&gt;
+      <guid>http://conanlm.github.io/post/windows%E5%92%8Coffice%E6%BF%80%E6%B4%BB/</guid>
+      <description>&lt;h2 id=&#34;激活windows&#34;&gt;激活windows&lt;/h2&gt;
 &lt;p&gt;使用管理员权限运行cmd执行&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;slmgr /skms kms.03k.org
 &lt;/code&gt;&lt;/pre&gt;
